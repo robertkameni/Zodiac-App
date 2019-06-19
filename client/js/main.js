@@ -1,4 +1,4 @@
-var zodiacs = [
+var zodiac = [
     {
         name: "Aries",
         month: "March 21-April 20",
@@ -37,7 +37,7 @@ var zodiacs = [
     {
         name: "Scorpio",
         month: "October 23 to November 22",
-        description: "Intense Scorpio is ruled by Pluto, planet of power and control. Pluto is a tiny powerhouse, and a bit of a mystery; in mythology Pluto was the god of the underworld. Many Scorpios are also drawn to “dark” things, and often wear the color black, or a shocking tone like red or hot pink. Like Pluto, Scorpio’s power often emanates from a hidden source, even when you don’t say a word. Mysterious Scorpio is the zodiac’s most misunderstood sign. You’re so powerful that people feel your presence, even before you’ve said a word! Sensitive Scorpio picks up vibes. You see every little detail, and you can read people like an open book. Once your friends get used to your high-intensity style, they know that you’re fiercely loyal. Anyone who betrays you had better watch out! Like a Scorpion, you’ll deliver a painful sting of revenge. Since your sign is naturally secretive, work on being more open with people. This will develop trust, and improve your relationships. Scorpio’s concentration powers are amazing, but be careful not to get obsessed. Curb any jealous or possessive feelings by pouring your energy into a creative project or passion.";
+        description: "Intense Scorpio is ruled by Pluto, planet of power and control. Pluto is a tiny powerhouse, and a bit of a mystery; in mythology Pluto was the god of the underworld. Many Scorpios are also drawn to “dark” things, and often wear the color black, or a shocking tone like red or hot pink. Like Pluto, Scorpio’s power often emanates from a hidden source, even when you don’t say a word. Mysterious Scorpio is the zodiac’s most misunderstood sign. You’re so powerful that people feel your presence, even before you’ve said a word! Sensitive Scorpio picks up vibes. You see every little detail, and you can read people like an open book. Once your friends get used to your high-intensity style, they know that you’re fiercely loyal. Anyone who betrays you had better watch out! Like a Scorpion, you’ll deliver a painful sting of revenge. Since your sign is naturally secretive, work on being more open with people. This will develop trust, and improve your relationships. Scorpio’s concentration powers are amazing, but be careful not to get obsessed. Curb any jealous or possessive feelings by pouring your energy into a creative project or passion.",
     },
     {
         name: "Sagittarius",
@@ -49,4 +49,13 @@ var zodiacs = [
         month: "December 22 to January 19",
         description: "Serious Capricorn is ruled by Saturn, the planet of tough lessons and wisdom. As a result, many Capricorns are “old souls” who play by the rules and follow tradition. Accustomed to regular butt-kickings from Saturn, you often see life as an uphill battle, with the ultimate reward arriving only through suffering and sacrifice. Ambitious Capricorn is symbolized by a mountain goat climbing up a rocky hill, taking one cautious step at a time. And that’s exactly how patient Caps like to do everything. You’ll skip the good stuff today if it means getting the reward tomorrow. That’s why your sign has more trophies and loyal friends than any other–you stay strong through the hard times. Hardworking Caps are devoted to their friends and families, and people count on you for support. You always keep your word. Remember to let yourself have fun, too! Life doesn’t always have to be a struggle. It’s okay to enjoy your victories, even if you didn’t work hard to win them. Lighten up and share your wacky, down-to-earth humor. When you get moody, let your family and closest friends be there for you–just as you always are for them.",
     }
-];
+]
+
+function getData() {
+    var userSearch = document.getElementById('user-search').value.toLowerCase();
+    for (var index = 0; index < zodiac.length; index++) {
+        if (userSearch === zodiac[index].name.toLowerCase()) {
+            document.getElementById('result').innerHTML = zodiacs[index].description;
+        }
+    }
+}
