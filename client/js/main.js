@@ -1,4 +1,4 @@
-var zodiac = [
+const zodiac = [
     {
         name: "Aries",
         month: "March 21-April 20",
@@ -52,10 +52,10 @@ var zodiac = [
 ]
 
 function getData() {
-    var userSearch = document.getElementById('user-search').value.toLowerCase();
-    for (var index = 0; index < zodiac.length; index++) {
+    const userSearch = document.getElementById('user-search').value.toLowerCase();
+    for (let index = 0; index < zodiac.length; index++) {
         if (userSearch === zodiac[index].name.toLowerCase()) {
-            document.getElementById('result').innerHTML = zodiacs[index].description;
+            document.getElementById('result').innerHTML = zodiac[index].description;
         }
     }
 }
